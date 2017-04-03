@@ -61,7 +61,7 @@ namespace ProductApps
             set { wrapping = value; }
         }
 
-        private decimal GST
+        public decimal GST
         {
             get { return gst; }
             set { gst = value; }
@@ -90,6 +90,11 @@ namespace ProductApps
         public void calWrapCharge()
         {
             WrapCharge = TotalCharge + 5.0M;
+        }
+
+        public void calGST()
+        {
+            GST = WrapCharge * 1.1M;
         }
     }
 }
